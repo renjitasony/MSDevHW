@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Interface</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script>
+    function getName()
+    {
+       var n=document.getElementById("name").value;
+       document.getElementById("lb1").innerHTML=n;
+
+    }
+</script>
+
+</head>
+<body>
+    <div style="margin-top: 100px">
+        <form action="">
+    <table class="table">
+        <tr>
+            <td>
+                <label for="" class="lb">Enter your Name</label>
+            </td>
+            <td>
+                <input type="text" class="form-control" id="name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="" id="lb1"></label>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary" onclick="getName();">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</div>
+</body>
+</html>
