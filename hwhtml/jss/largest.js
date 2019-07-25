@@ -7,3 +7,8 @@ if(x<y)
 else{
     console.log(x);
 }
+
+function largest()
+{
+    var n1 = parseInt(document.getElementById("name").value);
+}
