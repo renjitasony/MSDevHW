@@ -10,27 +10,42 @@
         .d1{
             margin-top: 50px;
             text-align: center;
+            padding: 30px;
         }
         .div1
-{
-    border: 2px solid rebeccapurple;
-   
-}
-.div2
-{
-border: 2px solid red;
+        {
+            border: 2px solid rebeccapurple;   
+        }
+        .div2
+        {
+            border: 2px solid red;
+        }
 
-}
-
-    </style>
+    </style>   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#registration").click(function(){
+                $(".div2").toggle();
+            });
+            $("#login").click(function(){
+                $(".div1").toggle();
+            });
+            $("#loginbtn").click(function(){
+                var uname  = $("#username").val();
+                alert("Your username is " +uname);
+            });
+        });
+    </script>
 </head>
 <body>
 
     <div class="container">
         <div class="row">
             <div class="col col-12 col-sm-6">
-               <div class=d1>
-                   <h2>Login</h2>
+               <div class="d1">
+                   <button class="btn btn-success" id="login">Login</button>
+                   <!-- <h2>Login</h2> -->
                </div>
                 <div class="div1">
                     
@@ -40,7 +55,7 @@ border: 2px solid red;
                               <label for="" class="label1">Username</label>
                           </td>
                           <td>
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" id="username">
                           </td>
 
                       </tr>
@@ -57,7 +72,7 @@ border: 2px solid red;
 
                               </td>
                               <td>
-                                  <input type="button" class= "btn btn-success"  value="Login">
+                                  <input type="button" class= "btn btn-success" id="loginbtn" value="Login">
                               </td>
                           </tr>
             
@@ -67,7 +82,8 @@ border: 2px solid red;
                 </div>
 <div class="col col-12 col-sm-6">
     <div class="d1">
-        <h2>Register here....</h2>
+        <button class="btn btn-info" id="registration">Registration</button>
+        <!-- <h2>Register here....</h2> -->
     </div>
     <div class="div2">
         <table class="table">
@@ -146,10 +162,7 @@ border: 2px solid red;
                         </td>
             </tr>
             <tr>
-                    <td>
-                            <input type="button " class="btn btn-info" value="Reset">
-
-                        </td>
+                    <td><input type="button " class="btn btn-info" value="Reset"></td>
                         <td>
                             <input type="button" class= "btn btn-primary"  value="Register">
                         </td>
