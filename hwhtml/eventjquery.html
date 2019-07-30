@@ -23,11 +23,44 @@
             $("#testme").blur(function(){
                 $("p").css("color","blue");
             });
+            $("#fadep").click(function(){
+                $("#changeclr").fadeToggle();
+            });
+            $("#changeclr").click(function(){
+                $("input").slideToggle();
+            });
+            $("#anbtn").click(function(){
+                $("div").animate({
+                    left:'250px',
+                    height: '+=150px',
+                    width: '+=150px',
+                    background:'blue'
+                });
+                $("changeclr").animate({
+                    height:'300px;'
+                });
+            });
+            $("div").click(function(){
+                var mydiv = $("div");
+                mydiv.animate({height: '300px', opacity: '0.4'}, "slow");
+                mydiv.animate({width: '300px', opacity: '0.8'}, "slow");
+                mydiv.animate({height: '100px', opacity: '0.4'}, "slow");
+                mydiv.animate({width: '100px', opacity: '0.8'}, "slow");
+            });
+            $("#stpbtn").click(function(){
+                var mydiv = $("div");                
+                mydiv.stop();
+            });
         });
     </script>
 </head>
 <body>
-    <p>Change my colour</p>
+    <p id="changeclr">Change my colour</p>
     <input type="text" name="" id="testme">
+    <br>
+    <p id="fadep">Fade all paragraphs</p>   
+    <button class="btn btn-primary" id="anbtn">Animate</button>
+    <button class="btn btn-danger" id="stpbtn">Stop</button>
+    <div style="background:#bd6218;height:100px;width:100px;position:absolute;"></div>
 </body>
 </html>
